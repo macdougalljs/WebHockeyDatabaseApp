@@ -1,0 +1,56 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HockeyJeremiahMacDougall2.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Hockey League Stats - Jeremiah MacDougall - Assignment 3</title>
+    <link href="styles/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="header">
+            <asp:Image ID="imgBanner" runat="server" ImageUrl="~/images/hockeybanner.jpg" Width="100%" />
+            <!-- Banner (n.d.). Retrieved from https://www.westernconnect.ca/site/Calendar?view=Detail&id=124341 -->
+            <div class="bottom-left"></div>
+            <div class="top-left"></div>
+            <div class="top-right"></div>
+            <div class="bottom-right">
+                <asp:Label ID="lblHeaderTitle" runat="server" Text="Hockey League Stats"></asp:Label>
+            </div>
+            <div class="centered"></div>
+
+        </div>
+        <div id="menubar">
+            <table style="width: 100%; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: large;">
+                <tr>
+                    <td>
+                        <asp:Button ID="btnHome" runat="server" BackColor="Black" BorderColor="Black" ForeColor="White" Text="Home" Font-Size="15pt" PostBackUrl="~/Home.aspx" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnAddPlayer" runat="server" BackColor="Black" BorderColor="Black" ForeColor="White" Text="Add Player" Font-Size="15pt" PostBackUrl="~/AddPlayer.aspx" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnEditPlayer" runat="server" BackColor="Black" BorderColor="Black" ForeColor="White" Text="Edit Player" Font-Size="15pt" PostBackUrl="~/EditPlayer.aspx" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnAddStats" runat="server" BackColor="Black" BorderColor="Black" ForeColor="White" Text="Add Stats" Font-Size="15pt" PostBackUrl="~/AddStats.aspx" />
+                    </td>
+                    <td>
+                        <asp:Button ID="btnEditStats" runat="server" BackColor="Black" BorderColor="Black" ForeColor="White" Text="Edit Stats" Font-Size="15pt" PostBackUrl="~/EditStats.aspx"  />
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="contents">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div id="footer">
+            Jeremiah MacDougall - SID# 991531555
+        </div>
+    </form>
+</body>
+</html>
